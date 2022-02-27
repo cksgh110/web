@@ -12,11 +12,25 @@
       document.querySelector('body').style.color = 'white';
       document.querySelector('body').style.backgroundColor = 'black';
       document.querySelector('#toggle').value = 'day';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'powderblue';
+          i=i+1;
+        }
     }
     else{
       document.querySelector('body').style.color = 'black';
       document.querySelector('body').style.backgroundColor = 'white';
       document.querySelector('#toggle').value = 'night';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'blue';
+          i=i+1;
+        }
     }
 
     ">
