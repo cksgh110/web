@@ -3,36 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>WEB1 - JavaScript</title>
+    <script type="text/javascript">
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        target.style.color = 'white';
+        target.style.backgroundColor = 'black';
+        self.value = 'day';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i <alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+          }
+        }
+      else{
+        target.style.color = 'black';
+        target.style.backgroundColor = 'white';
+        self.value = 'night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i <alist.length){
+            alist[i].style.color = 'blue';
+            i = i + 1;
+        }
+      }
+    }
+    </script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input id="toggle" type="button" name="" value="night" onclick="
-    if(document.querySelector('#toggle').value === 'night'){
-      document.querySelector('body').style.color = 'white';
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('#toggle').value = 'day';
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i<alist.length){
-          console.log(alist[i]);
-          alist[i].style.color = 'powderblue';
-          i=i+1;
-        }
-    }
-    else{
-      document.querySelector('body').style.color = 'black';
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('#toggle').value = 'night';
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i<alist.length){
-          console.log(alist[i]);
-          alist[i].style.color = 'blue';
-          i=i+1;
-        }
-    }
-
+    <input id="night_day" type="button" name="" value="night" onclick="
+      nightDayHandler(this);
     ">
     <div id="grid">
       <ol>
