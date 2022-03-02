@@ -3,33 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>WEB1 - JavaScript</title>
-    <script type="text/javascript">
-    function nightDayHandler(self){
-      var target = document.querySelector('body');
-      if(self.value === 'night'){
-        target.style.color = 'white';
-        target.style.backgroundColor = 'black';
-        self.value = 'day';
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i <alist.length){
-            alist[i].style.color = 'powderblue';
-            i = i + 1;
-          }
-        }
-      else{
-        target.style.color = 'black';
-        target.style.backgroundColor = 'white';
-        self.value = 'night';
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i <alist.length){
-            alist[i].style.color = 'blue';
-            i = i + 1;
-        }
-      }
-    }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="colors.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
